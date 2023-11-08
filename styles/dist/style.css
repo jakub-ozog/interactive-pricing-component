@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("/images/bg-pattern.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Manrope", sans-serif;
+  min-block-size: 50vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main {
+  text-align: center;
+  margin-top: 3rem;
+}
+.main__title h1 {
+  font-size: 26px;
+  margin-bottom: 1.25rem;
+  color: #293356;
+}
+.main__title h2 {
+  font-size: 0.875rem;
+  color: #858fad;
+  font-weight: 600;
+}
+
+.card {
+  margin-top: 3rem;
+  background: #d8d5d5;
+  width: 300px;
+  height: 400px;
+  padding: 1rem 2rem;
+}

@@ -1,0 +1,72 @@
+// Colors
+$SoftCyan: hsl(174, 77%, 80%);
+$StrongCyan: hsl(174, 86%, 45%);
+$LightGrayish: Red hsl(14, 92%, 95%);
+$LightRed: hsl(15, 100%, 70%);
+$PaleBlue: hsl(226, 100%, 87%);
+
+// ColorNeutral
+
+$White: hsl(0, 0%, 100%);
+$VeryPaleBlue: hsl(230, 100%, 99%);
+$LightGrayishBlue: hsl(224, 65%, 95%);
+$LightGrayishBlue: hsl(223, 50%, 87%);
+$GrayishBlue: hsl(225, 20%, 60%);
+$DarkDesaturatedBlue: hsl(227, 35%, 25%);
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url('/images/bg-pattern.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Manrope", sans-serif;
+    min-block-size: 50vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+
+.main {  
+    text-align: center;
+    margin-top: 3rem;
+
+    &__title {
+        h1 {
+            font-size: 26px;
+            margin-bottom: 1.25rem;
+            color: $DarkDesaturatedBlue;
+        }
+        h2 {
+            font-size: 0.875rem;
+            color: $GrayishBlue;
+            font-weight: 600;
+        }
+    }
+}
+
+.card {
+   margin-top: 3rem;
+    background: rgb(216, 213, 213);
+    width: 300px;
+    height: 400px;
+    padding: 1rem 2rem;
+}

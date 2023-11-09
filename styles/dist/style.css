@@ -4,12 +4,21 @@
   padding: 0;
 }
 
-body {
+html {
+  background-color: #fafbff;
+  font-family: "Manrope", sans-serif;
+}
+
+.bodyBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
   background: url("/images/bg-pattern.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: "Manrope", sans-serif;
-  min-block-size: 50vh;
+  z-index: -1;
 }
 
 .container {
@@ -23,24 +32,62 @@ body {
 }
 
 .main {
+  position: relative;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 6rem;
+}
+.main__bg {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+}
+.main__bg img {
+  width: 125px;
+}
+.main__title {
+  position: relative;
 }
 .main__title h1 {
   font-size: 26px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: #293356;
 }
 .main__title h2 {
-  font-size: 0.875rem;
+  font-size: 14px;
   color: #858fad;
   font-weight: 600;
 }
 
 .card {
-  margin-top: 3rem;
-  background: #d8d5d5;
-  width: 300px;
-  height: 400px;
-  padding: 1rem 2rem;
+  margin-top: 5rem;
+  background: white;
+  width: clamp(250px, 60%, 1000px);
+  padding: 3rem 3rem;
+  border-radius: 20px;
+  box-shadow: 1px 1px 12px -4px #27272736;
+}
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__views {
+  color: #858fad;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+}
+.card__price p {
+  font-size: 2.125rem;
+  color: #293356;
+  font-weight: 800;
+}
+.card__price span {
+  font-size: 1rem;
+  color: #858fad;
+  font-weight: 600;
+}
+.card__slider {
+  margin-top: 4rem;
+  text-align: center;
 }

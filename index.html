@@ -14,16 +14,35 @@
 </head>
 
 <body>
+  <div class="bodyBg"></div>
   <div class="container">
-  <main class="main">
-    <section class="main__title">
+    <main class="main">
+      <div class="main__bg">
+        <img src="/images/pattern-circles.svg" alt="">
+      </div>
+      <section class="main__title">
         <h1>Simple, traffic-based pricing</h1>
         <h2>Sign-up for our 30-day trial. No credit card required</h2>
       </section>
     </main>
     <section class="card">
-
+      <div class="card__header">
+        <div class="card__views">
+          <p>100K PAGEVIEWS</p>
+        </div>
+        <div class="card__price">
+          <p>
+            $16.00
+            <span>/ month</span>
+          </p>
+        </div>
+      </div>
+      <div class="card__slider">
+        <input id="rangeSlider" type="range" min="50000" max="100000">
+      </div>
     </section>
-    </div>
+
+  </div>
 </body>
+
 </html>

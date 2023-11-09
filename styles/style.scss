@@ -6,7 +6,6 @@ $LightRed: hsl(15, 100%, 70%);
 $PaleBlue: hsl(226, 100%, 87%);
 
 // ColorNeutral
-
 $White: hsl(0, 0%, 100%);
 $VeryPaleBlue: hsl(230, 100%, 99%);
 $LightGrayishBlue: hsl(224, 65%, 95%);
@@ -14,24 +13,29 @@ $LightGrayishBlue: hsl(223, 50%, 87%);
 $GrayishBlue: hsl(225, 20%, 60%);
 $DarkDesaturatedBlue: hsl(227, 35%, 25%);
 
-
-
-
-
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+html {
+    background-color: $VeryPaleBlue;
+    font-family: "Manrope", sans-serif;
+}
+
+.bodyBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
     background: url('/images/bg-pattern.svg');
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: "Manrope", sans-serif;
-    min-block-size: 50vh;
+    z-index: -1;
 }
+
 
 .container {
     display: flex;
@@ -45,18 +49,34 @@ body {
 
 
 
-.main {  
+.main {
+    position: relative;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 6rem;
+
+    &__bg {
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        right: 0;
+
+        img {
+            width: 125px;
+
+        }
+    }
 
     &__title {
+        position: relative;
+
         h1 {
             font-size: 26px;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             color: $DarkDesaturatedBlue;
         }
+
         h2 {
-            font-size: 0.875rem;
+            font-size: 14px;
             color: $GrayishBlue;
             font-weight: 600;
         }
@@ -64,9 +84,41 @@ body {
 }
 
 .card {
-   margin-top: 3rem;
-    background: rgb(216, 213, 213);
-    width: 300px;
-    height: 400px;
-    padding: 1rem 2rem;
+    margin-top: 5rem;
+    background: $White;
+    width: clamp(250px, 60%, 1000px);
+    padding: 3rem 3rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px 12px -4px #27272736;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__views {
+        color: $GrayishBlue;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+    }
+
+    &__price {
+        p {
+            font-size: 2.125rem;
+            color: $DarkDesaturatedBlue;
+            font-weight: 800;
+        }
+
+        span {
+            font-size: 1rem;
+            color: $GrayishBlue;
+            font-weight: 600;
+        }
+    }
+
+    &__slider {
+        margin-top: 4rem;
+        text-align: center;
+    }
 }

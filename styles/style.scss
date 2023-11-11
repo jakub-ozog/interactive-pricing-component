@@ -1,5 +1,5 @@
 // Colors
-$SoftCyan: hsl(174, 77%, 80%);
+$SoftCyan: #a5f3eb;
 $StrongCyan: hsl(174, 86%, 45%);
 $LightGrayish: Red hsl(14, 92%, 95%);
 $LightRed: hsl(15, 100%, 70%);
@@ -86,7 +86,7 @@ html {
 .card {
     margin-top: 5rem;
     background: $White;
-    width: clamp(250px, 60%, 1000px);
+    width: clamp(250px, 40%, 1000px);
     padding: 3rem 3rem;
     border-radius: 20px;
     box-shadow: 1px 1px 12px -4px #27272736;
@@ -103,12 +103,17 @@ html {
         letter-spacing: 3px;
     }
 
+&__priceWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
     &__price {
-        p {
             font-size: 2.125rem;
             color: $DarkDesaturatedBlue;
             font-weight: 800;
-        }
 
         span {
             font-size: 1rem;
@@ -118,7 +123,67 @@ html {
     }
 
     &__slider {
+        display: flex;
+        justify-content: center;
         margin-top: 4rem;
         text-align: center;
     }
+}
+
+
+
+/* range 2 */
+.range-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 6px;
+    background: #ccc;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: $StrongCyan;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.range-input::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: $StrongCyan;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+}
+
+.range-input::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 20px 5px $StrongCyan;
+}
+
+// .range-input:active::-webkit-slider-thumb {
+//     box-shadow: 0 0 0 13px $StrongCyan;
+// }
+
+// .range-input:focus::-webkit-slider-thumb {
+//     box-shadow: 0 0 20px 5px $StrongCyan;
+// }
+
+.range-input::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255, 85, 0, .1)
+}
+
+.range-input:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
+}
+
+.range-input:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
 }

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Interactive pricing component</title>
   <link rel="stylesheet" href="styles/dist/style.css">
-  <script defer src=""></script>
+  <script defer src="/app/script.js"></script>
 </head>
 
 <body>
@@ -30,17 +30,25 @@
         <div class="card__views">
           <p>100K PAGEVIEWS</p>
         </div>
-        <div class="card__price">
-          <p>
-            $16.00
-            <span>/ month</span>
+        <div class="card__priceWrapper">
+          <p class="card__price">
+            <!-- $16.00 -->
           </p>
+          <span>/ month</span>
         </div>
       </div>
       <div class="card__slider">
-        <input id="rangeSlider" type="range" min="50000" max="100000">
       </div>
-    </section>
+
+
+      <div class="range">
+        <div class="range-slider">
+          <input type="range" min="0" max="30" value="16" step="2" class="range-input" id="range4" />
+        </div>
+      </div>
+  </div>
+  </div>
+  </section>
 
   </div>
 </body>

@@ -1,7 +1,7 @@
 // Colors
-$SoftCyan: hsl(174, 77%, 80%);
+$SoftCyan: #a5f3eb;
 $StrongCyan: hsl(174, 86%, 45%);
-$LightGrayish: Red hsl(14, 92%, 95%);
+$LightGrayishRed: hsl(14, 92%, 95%);
 $LightRed: hsl(15, 100%, 70%);
 $PaleBlue: hsl(226, 100%, 87%);
 
@@ -86,9 +86,9 @@ html {
 .card {
     margin-top: 5rem;
     background: $White;
-    width: clamp(250px, 60%, 1000px);
+    width: clamp(250px, 40%, 1000px);
     padding: 3rem 3rem;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 1px 1px 12px -4px #27272736;
 
     &__header {
@@ -103,12 +103,17 @@ html {
         letter-spacing: 3px;
     }
 
+    &__priceWrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+
     &__price {
-        p {
-            font-size: 2.125rem;
-            color: $DarkDesaturatedBlue;
-            font-weight: 800;
-        }
+        font-size: 2.125rem;
+        color: $DarkDesaturatedBlue;
+        font-weight: 800;
 
         span {
             font-size: 1rem;
@@ -118,7 +123,154 @@ html {
     }
 
     &__slider {
-        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
         text-align: center;
     }
+
+
+
+    &__billingInput {
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        left: -9000px;
+        top: -9000px;
+        transition: .2s;
+
+        &:checked+label {
+            transition: .2s;
+
+            &:after {
+                left: 1.2em;
+                transition: .2s;
+            }
+
+            &:before {
+                background-color: $StrongCyan;
+                transition: .2s;
+            }
+        }
+    }
+
+&__billing {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+    margin-top: 1.5rem;
+
+    label {
+        font-size: 1rem;
+        color: $GrayishBlue;
+        user-select: none;
+    }
+}
+
+    &__billingInput+label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        transition: .2s;
+        
+
+        &:before {
+            content: '';
+            width: 2em;
+            height: 1em;
+            background: #ddd;
+            border-radius: 1em;
+            margin-right: 1rem;
+            transition: .2s;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: .1em;
+            width: .7em;
+            height: .7em;
+            background: $White;
+            border-radius: 1em;
+            margin-right: .25em;
+            transition: .2s;
+        }
+    }
+
+    &__discount {
+        padding: .25rem .5rem;
+        border-radius: 25px;
+        background-color: $LightGrayishRed;
+        font-size: 0.625rem;
+
+        p {
+            color: $LightRed;
+        }
+    }
+
+
+}
+
+/* range 2 */
+.range-input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    height: 8px;
+    background: #ccc;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    // appearance: none;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: $StrongCyan url('/images/icon-slider.svg') center no-repeat;
+    border: none;
+    transition: .2s ease-in-out;
+
+    &:hover {
+
+        background: $StrongCyan url('/images/icon-slider.svg') center no-repeat;
+    }
+}
+
+.range-input::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: $StrongCyan;
+    border-radius: 50%;
+    border: none;
+    transition: .2s ease-in-out;
+
+
+}
+
+.range-input::-webkit-slider-thumb:hover {
+    box-shadow: 0 15px 35px 0px $StrongCyan;
+}
+
+.range-input:active::-webkit-slider-thumb {
+    cursor: grab;
+}
+
+// .range-input:focus::-webkit-slider-thumb {
+//     box-shadow: 0 0 20px 5px $StrongCyan;
+// }
+
+.range-input::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgba(255, 85, 0, .1)
+}
+
+.range-input:active::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
+}
+
+.range-input:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
 }

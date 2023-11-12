@@ -64,7 +64,7 @@ html {
   background: white;
   width: clamp(250px, 40%, 1000px);
   padding: 3rem 3rem;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 1px 1px 12px -4px #27272736;
 }
 .card__header {
@@ -95,8 +95,74 @@ html {
 .card__slider {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin-top: 1.5rem;
   text-align: center;
+}
+.card__billingInput {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  left: -9000px;
+  top: -9000px;
+  transition: 0.2s;
+}
+.card__billingInput:checked + label {
+  transition: 0.2s;
+}
+.card__billingInput:checked + label:after {
+  left: 1.2em;
+  transition: 0.2s;
+}
+.card__billingInput:checked + label:before {
+  background-color: #10d5c2;
+  transition: 0.2s;
+}
+.card__billing {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.card__billing label {
+  font-size: 1rem;
+  color: #858fad;
+  user-select: none;
+}
+.card__billingInput + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+.card__billingInput + label:before {
+  content: "";
+  width: 2em;
+  height: 1em;
+  background: #ddd;
+  border-radius: 1em;
+  margin-right: 1rem;
+  transition: 0.2s;
+}
+.card__billingInput + label:after {
+  position: absolute;
+  content: "";
+  left: 0.1em;
+  width: 0.7em;
+  height: 0.7em;
+  background: white;
+  border-radius: 1em;
+  margin-right: 0.25em;
+  transition: 0.2s;
+}
+.card__discount {
+  padding: 0.25rem 0.5rem;
+  border-radius: 25px;
+  background-color: #feece7;
+  font-size: 0.625rem;
+}
+.card__discount p {
+  color: #ff8c66;
 }
 
 /* range 2 */
@@ -107,19 +173,21 @@ html {
   cursor: pointer;
   outline: none;
   border-radius: 15px;
-  height: 6px;
+  height: 8px;
   background: #ccc;
 }
 
 .range-input::-webkit-slider-thumb {
   -webkit-appearance: none;
-  appearance: none;
-  height: 15px;
-  width: 15px;
-  background-color: #10d5c2;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
+  background: #10d5c2 url("/images/icon-slider.svg") center no-repeat;
   border: none;
   transition: 0.2s ease-in-out;
+}
+.range-input::-webkit-slider-thumb:hover {
+  background: #10d5c2 url("/images/icon-slider.svg") center no-repeat;
 }
 
 .range-input::-moz-range-thumb {
@@ -132,7 +200,11 @@ html {
 }
 
 .range-input::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 20px 5px #10d5c2;
+  box-shadow: 0 15px 35px 0px #10d5c2;
+}
+
+.range-input:active::-webkit-slider-thumb {
+  cursor: grab;
 }
 
 .range-input::-moz-range-thumb:hover {

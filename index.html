@@ -15,7 +15,7 @@
 
 <body>
   <div class="bodyBg"></div>
-  <div class="container">
+    <div class="container">
     <main class="main">
       <div class="main__bg">
         <img src="/images/pattern-circles.svg" alt="">
@@ -25,40 +25,59 @@
         <h2>Sign-up for our 30-day trial. No credit card required</h2>
       </section>
     </main>
-    <section class="card">
-      <div class="card__header">
-        <div class="card__views">
-          <p>100K PAGEVIEWS</p>
-        </div>
-        <div class="card__priceWrapper">
-          <p class="card__price">
-            <!-- $16.00 -->
-          </p>
-          <span>/ month</span>
-        </div>
-      </div>
-      <div class="card__slider">
-      </div>
-      <div class="range">
-        <div class="range-slider">
-          <input type="range" min="0" max="30" value="16" step="2" class="range-input" id="range4" />
-        </div>
-      </div>
+      <section class="card">
+        <div class="card__wrapper">
 
-      <div class="card__billing">
-        <label class="card__billingLabel" for="checkBox">Monthly Billing</label>
-        <input class="card__billingInput" id="checkBox" type="checkbox">
-        <label class="card__billingLabel" for="checkBox">Yearly Billing</label>
-        <div class="card__discount">
-          <p>
-            25% discount
-          </p>
+          <div class="card__header">
+            <div class="card__views">
+              <p>100K PAGEVIEWS</p>
+            </div>
+            <div class="card__priceWrapper">
+              <p class="card__price">
+                <!-- $16.00 -->
+              </p>
+              <span>/ month</span>
+            </div>
+          </div>
+          <div class="card__slider">
+          </div>
+          <div class="range">
+            <div class="range-slider">
+              <input type="range" min="0" max="30" value="16" step="2" class="range-input" id="range4" />
+            </div>
+          </div>
+          
+          <div class="card__billing"> 
+            <label class="card__billingLabel" for="checkBox">Monthly Billing</label>
+            <input class="card__billingInput" id="checkBox" type="checkbox">
+            <label class="card__billingLabel" for="checkBox">Yearly Billing</label>
+            <div class="card__discount">
+              <p>
+                25% discount
+              </p>
+            </div>
+          </div>
         </div>
+        <hr class="card__bar">
+        <div class="card__wrapper">
+          <div class="card__features">
+            <div>
+              <ul>
+                <li>Unlimited websites</li>
+                <li>100% data ownership</li>
+                <li>Email reports</li>
+              </ul>
+            </div>
+
+            <div>
+              <button type="button" aria-label="button" class="card__trialBtn">Start my trial</button>
+            </div>
+          </div>
+        </div>
+        </section>
       </div>
+    </div>
   </div>
-  </div>
-  </div>
-  </section>
 
   </div>
 </body>

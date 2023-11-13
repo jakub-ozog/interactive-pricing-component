@@ -84,12 +84,16 @@ html {
 }
 
 .card {
-    margin-top: 5rem;
-    background: $White;
     width: clamp(250px, 40%, 1000px);
-    padding: 3rem 3rem;
+    background: $White;
+    margin-top: 5rem;
     border-radius: 10px;
-    box-shadow: 1px 1px 12px -4px #27272736;
+    box-shadow: 0px 10px 16px 6px #a9b6c938;
+
+    &__wrapper {
+        padding: 3rem 3rem;
+
+    }
 
     &__header {
         display: flex;
@@ -154,26 +158,28 @@ html {
         }
     }
 
-&__billing {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    &__billing {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 1rem;
+        margin-top: 2.5rem;
+        margin-right: 1.25rem;
 
-    label {
-        font-size: 1rem;
-        color: $GrayishBlue;
-        user-select: none;
+        label {
+            font-size: 0.8125rem;
+            color: $GrayishBlue;
+            user-select: none;
+            
+        }
     }
-}
 
     &__billingInput+label {
         position: relative;
         display: flex;
         align-items: center;
         transition: .2s;
-        
+
 
         &:before {
             content: '';
@@ -209,8 +215,53 @@ html {
         }
     }
 
+    &__bar {
+        height: 2px;
+        background-color: $VeryPaleBlue;
+        border: none;
+    }
 
+    &__features {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $GrayishBlue;
+        font-size: 12px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            list-style: none;
+
+            li {
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 12px;
+                    background: url('/images/icon-check.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: middle;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+
+    &__trialBtn {
+        padding: .75rem 2.5rem;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: $DarkDesaturatedBlue;
+        color: $White;
+        border-radius: 25px;
+    }
 }
+
 
 /* range 2 */
 .range-input {

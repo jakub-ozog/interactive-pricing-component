@@ -60,14 +60,14 @@ html {
 }
 
 .card {
-  width: clamp(250px, 40%, 1000px);
+  width: clamp(350px, 75%, 600px);
   background: white;
   margin-top: 5rem;
   border-radius: 10px;
   box-shadow: 0px 10px 16px 6px #a9b6c938;
 }
 .card__wrapper {
-  padding: 3rem 3rem;
+  padding: 2.5rem;
 }
 .card__header {
   display: flex;
@@ -83,6 +83,22 @@ html {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+.card__priceWrapper.desktop {
+  display: flex;
+}
+@media (max-width: 576px) {
+  .card__priceWrapper.desktop {
+    display: none;
+  }
+}
+.card__priceWrapper.mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .card__priceWrapper.mobile {
+    display: flex;
+  }
 }
 .card__price {
   font-size: 2.125rem;
@@ -166,6 +182,11 @@ html {
 }
 .card__discount p {
   color: #ff8c66;
+}
+@media (max-width: 576px) {
+  .card__discount-text {
+    display: none;
+  }
 }
 .card__bar {
   height: 2px;
